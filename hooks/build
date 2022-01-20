@@ -6,7 +6,7 @@ set -eux
 
 if [ -z "${IMAGE_NAME}" ]; then
     echo ! "IMAGE_NAME" variable missing.
-    echo eg. IMAGE_NAME="dehy/adminer:local" sh $0
+    echo eg. IMAGE_NAME="thalesog/adminer:local" sh $0
     exit 1
 fi
 

@@ -1,19 +1,18 @@
 adminer:
-    image: 'dehy/adminer:latest'
-    # build: .
-    ports:
-        - '80:80'
-    # links:
-        # - mysql
-        # - postgres
-        # - sqlite
-        # - mssql
-        # - oracle
-        # - firebird
-        # - simpledb
-        # - elastic
-        # - mongodb
-
+  image: 'thalesog/adminer:latest'
+  # build: .
+  ports:
+    - '80:80'
+  # links:
+  # - mysql
+  # - postgres
+  # - sqlite
+  # - mssql
+  # - oracle
+  # - firebird
+  # - simpledb
+  # - elastic
+  # - mongodb
 # mysql:
 #     image: mysql:latest
 #     environment:

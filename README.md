@@ -1,18 +1,27 @@
-# dehy/adminer
+<p align="center"><img alt="@bull-board" src="https://raw.githubusercontent.com/felixmosh/bull-board/master/packages/ui/src/static/images/logo.svg" width="128px" /></p>
 
-[![](https://images.microbadger.com/badges/image/dehy/adminer.svg)](https://microbadger.com/images/dehy/adminer "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/dehy/adminer.svg)](https://microbadger.com/images/dehy/adminer "Get your own version badge on microbadger.com")
+# <p align="center">Adminer<p>
 
-[Adminer](http://www.adminer.org/en/) is a full-featured database management
-tool for the web. It is a lightweight alternative to setting up phpMyAdmin.
-This is a very minimalist [docker](https://www.docker.com) image that eases setup.
+<p align="center">
+  <a href="https://circleci.com/gh/thalesog/docker-adminer">
+    <img alt="build status" src="https://img.shields.io/circleci/build/gh/thalesog/docker-adminer/master?style=for-the-badge&color=blueviolet&logo=CircleCI">
+  </a>
+  <a href="https://www.npmjs.com/org/bull-board">
+    <img alt="npm downloads" src="https://img.shields.io/docker/pulls/thalesog/adminer?style=for-the-badge&color=blueviolet&logo=Docker">
+  </a>
+  <img alt="open issues" src="https://img.shields.io/github/issues/thalesog/docker-adminer?style=for-the-badge&color=blueviolet"/>
+  <a href="https://github.com/vcapretz/bull-board/blob/master/LICENSE">
+    <img alt="licence" src="https://img.shields.io/github/license/thalesog/docker-adminer?style=for-the-badge&color=blueviolet">
+  </a>
+<p>
+<p align="center">
+  Docker image for <b><a href="https://github.com/vrana/adminer">adminer</a></b>.<br />
+  Batteries included! 🔋<br />
+<p>
 
-![](http://www.adminer.org/static/designs/hever/screenshot.png)
+# :memo: About
 
-See also [online demo](http://adminer.sourceforge.net/adminer.php?username=).
-
-## Usage
-
-This docker image is available as an [automated build on the docker registry](https://hub.docker.com/r/dehy/adminer/).
+This docker image is available as an [automated build on the docker registry](https://hub.docker.com/r/thalesog/adminer/) and along the default adminer script, we have preconfigured **[Dracula theme](https://github.com/dracula/adminer)**, and a generated `permanentLogin` key.
 
 The following databases are supported by this docker image:
 
@@ -29,21 +38,32 @@ Unsupported databases (TODO) :
 - Oracle
 - Firebird
 
-The recommended way to run this container looks like this:
+# :rocket: Usage
+
+## Quick start with `docker`
 
 ```bash
-$ docker run --link=mysql:mysql -d -p 80:80 dehy/adminer
+$ docker run --link=mysql:mysql -d -p 9091:80 thalesog/adminer
 ```
 
-The above example exposes the Adminer webinterface on port 80, so that you can now browse to http://localhost/
+## Quick start with `docker-compose`
+
+```yaml
+version: '3.8'
+
+services:
+  adminer:
+    container_name: adminer
+    image: thalesog/adminer
+    ports:
+      - 9091:80
+```
+
+The above example exposes the **Adminer** webinterface on port `9091`, so that you can now browse to `localhost:9091`
 
 This is a rather common setup following docker's conventions:
 
-* `--link={database_container}:{alias}` will link a separate *database_container* (MySQL, PostgreSQL, ...) to this container, thus make possible to connect to it via adminer with *alias* hostname
-* `-d` will run a detached instance in the background
-* `-p {OutsidePort}:80` will bind the webserver to the given outside port
-* `dehy/adminer` the name of this docker image
-
-## Docker Cloud
-
-[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/dehy/docker-adminer)
+- `--link={database_container}:{alias}` will link a separate _database_container_ (MySQL, PostgreSQL, ...) to this container, thus make possible to connect to it via adminer with _alias_ hostname
+- `-d` will run a detached instance in the background
+- `-p {OutsidePort}:80` will bind the webserver to the given outside port
+- `thalesog/adminer` the name of this docker image
