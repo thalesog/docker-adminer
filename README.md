@@ -1,4 +1,4 @@
-<p align="center"><img alt="thalesog/Adminer" src="https://raw.githubusercontent.com/thalesog/docker-adminer/master/assets/logo.png" width="128px" /></p>
+<p align="center"><img alt="thalesog/Adminer" src="assets/logo.png" width="128px" /></p>
 
 # <p align="center">Adminer<p>
 
