@@ -1,11 +1,11 @@
-<p align="center"><img alt="@bull-board" src="https://raw.githubusercontent.com/felixmosh/bull-board/master/packages/ui/src/static/images/logo.svg" width="128px" /></p>
+<p align="center"><img alt="thalesog/Adminer" src="https://raw.githubusercontent.com/thalesog/docker-adminer/master/assets/logo.png" width="128px" /></p>
 
 # <p align="center">Adminer<p>
 
 <p align="center">
-  <a href="https://circleci.com/gh/thalesog/docker-adminer">
+  <!-- <a href="https://circleci.com/gh/thalesog/docker-adminer">
     <img alt="build status" src="https://img.shields.io/circleci/build/gh/thalesog/docker-adminer/master?style=for-the-badge&color=blueviolet&logo=CircleCI">
-  </a>
+  </a> -->
   <a href="https://www.npmjs.com/org/bull-board">
     <img alt="npm downloads" src="https://img.shields.io/docker/pulls/thalesog/adminer?style=for-the-badge&color=blueviolet&logo=Docker">
   </a>
@@ -19,7 +19,7 @@
   Batteries included! 🔋<br />
 <p>
 
-# :memo: About
+# :page_with_curl: About
 
 This docker image is available as an [automated build on the docker registry](https://hub.docker.com/r/thalesog/adminer/) and along the default adminer script, we have preconfigured **[Dracula theme](https://github.com/dracula/adminer)**, and a generated `permanentLogin` key.
 
@@ -67,3 +67,17 @@ This is a rather common setup following docker's conventions:
 - `-d` will run a detached instance in the background
 - `-p {OutsidePort}:80` will bind the webserver to the given outside port
 - `thalesog/adminer` the name of this docker image
+
+# 🍰 Contributing
+
+Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/thalesog/docker-adminer/compare).
+
+# 📝 License
+
+This project is under [MIT](https://github.com/thalesog/docker-adminer/blob/master/LICENSE) license.
+
+#
+
+<p align="center">
+Developed with 💚 by <a href="https://github.com/thalesog">Thales Ogliari</a> 🇧🇷
+</p>
